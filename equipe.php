@@ -45,12 +45,16 @@
 
         // méthode pour afficher les joueurs d'une équipe
         public function joueurs() {
-            $joueurs = [];
-            foreach ($this->carriere as $joueur) {
-                echo $joueur->getJoueur();
+            echo "<div class='blue'>";
+            echo $this->nom_equipe . "<br>";
+            echo $this->pays->getNomPays() ." ".$this->annee_creation . "<br>";
+            foreach ($this->carriere as $carriere) {
+                $joueur = $carriere->getJoueur();
+                echo $joueur->getPrenom() . " " . $joueur->getNom() . " - Année de début de carrière : " . $carriere->getAnneeSaison() . "<br>";
             }
-            return implode(", ", $joueurs);
+            echo "</div>";
         }
+        
 
     }
 

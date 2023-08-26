@@ -55,13 +55,24 @@
             array_push($this->carriere, $carriere);
         }
 
+        public function getAge() {
+            $date = new DateTime($this->date_de_naissance);
+            $now = new DateTime();
+            $interval = $now->diff($date);
+            return $interval->format('%y');
+        }
+
         // méthode pour afficher les carrières d'un joueur
         public function carrieres() {
-            $carriere = [];
+            echo '<div class="green">';
+            echo $this->prenom . " " . $this->nom . '<br>';
+            echo $this->pays . " - " . $this->getAge() . ' ans <br>';
             foreach ($this->carriere as $carriere) {
-                echo $carriere->getAnneeSaison() . " " . $carriere->getEquipe()->getNomEquipe();
+                echo "(" . $carriere->getAnneeSaison() . ") " . $carriere->getEquipe()->getNomEquipe() . "<br>";
             }
+            echo '</div>';
         }
+        
     }
 
 ?>

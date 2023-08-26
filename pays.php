@@ -27,10 +27,12 @@
 
         // méthode pour afficher les équipes d'un pays
         public function equipes() {
-            $equipes = [];
+            echo '<div class="red">';
+            echo $this->nom_pays . '<br>';
             foreach ($this->equipes as $equipe) {
-                echo $equipes[] = $equipe->getNomEquipe();
+                echo $equipe->getNomEquipe() . '<br>';
             }
+            echo '</div>';
         }
     }
 
