@@ -2,29 +2,26 @@
     font-family: sans-serif;
 }
 
-.red {
-    background-color: #bc6665;
+.red,
+.blue,
+.green {
     width: 250px;
     height: 250px;
     padding: 10px;
     color: #fff;
     font-size: 1.50rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.red {
+    background-color: #bc6665;
 }
 
 .blue {
     background-color: #5d9cec;
-    width: 250px;
-    height: 250px;
-    padding: 10px;
-    color: #fff;
-    font-size: 1.50rem;
 }
 
 .green {
     background-color: #97cd76;
-    width: 250px;
-    height: 250px;
-    padding: 10px;
-    color: #fff;
-    font-size: 1.50rem;
 }
